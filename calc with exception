@@ -1,0 +1,48 @@
+
+def number1():
+    input1 = input('Enter the first number:')
+    if input1 in ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'):
+        print('Enter a valid number')
+        return number1()
+    global a
+    a=float(input1)
+number1()
+
+
+def number2(): 
+    input2 = input('Enter the second number:')
+    if input2 in ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'):
+        print('Enter a valid number')
+        return number2()
+    global b
+    b=int(input2)
+number2()
+
+def arithmetic_operator():
+    global c
+    c = input ('Enter the arithmetic operator:')
+    if c not in ('+','-','*','/','**'):
+        print('enter the correct arithmetic operator')
+        return arithmetic_operator()
+arithmetic_operator()
+
+try:
+     def calculation():
+        if c == '+':
+            return(a+b)
+        if c == '-':
+            return(a-b)
+        if c == '*':
+            return(a*b)
+        if c == '/':
+            return(a/b)
+        if c =='**':
+            return(a**b)
+        
+except Exception as e:
+    print (f'Something went Wrong{e}')
+
+result=calculation()
+
+print(int(result))
+
